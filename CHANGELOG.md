@@ -10,6 +10,7 @@
 - `appkit-app-inspector`: drives flexscope runtime view inspection (doctor gate → filter→drill → AppKit recipe); dev-box-only.
 - `appkit-session-report`: wraps `analyze-session.swift` with a privacy gate (user-invoked).
 - `appkit-packaging` elevated: Developer ID + TestFlight + Mac App Store (ASC API key, ExportOptions, App Sandbox) + 3 ship scripts.
+- [Agent Plugins 1.0](https://agent-plugins.org) manifest at `plugins/appkit/plugin.json`, so clients that implement the open standard (Cursor, Codex, GitHub Copilot) can load the skills. The Claude Code manifest in `.claude-plugin/` is unchanged; keep `name`, `version`, `description`, `author`, and `keywords` identical in both.
 
 ### Changed
 - **No-Python toolkit:** ported `appkit-session-report`'s analyzer from Python to a single-file hashbang **Swift** script (`analyze-session.swift`, Foundation-only) — byte-identical output, verified against real sessions. The suite now depends only on Swift + bash/zsh.
