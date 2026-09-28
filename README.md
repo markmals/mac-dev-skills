@@ -12,6 +12,12 @@ To install only the skills in any agent that supports [Agent Skills](https://age
 npx skills add markmals/mac-dev-skills
 ```
 
+Without `npm`, use [Rosie](https://rosieskills.dev), a standalone skills installer available from Homebrew:
+```bash
+brew install rosieskills/rosie/rosie
+rosie install markmals/mac-dev-skills
+```
+
 ## What's inside
 - **14 skills** under `plugins/appkit/skills/` — `appkit-design` (the flagship: control selection, layout, semantic color/typography, Liquid Glass, window sizing, a11y — wired to both tools), `apple-hig` (the complete Apple Human Interface Guidelines bundled offline as a router skill — the all-platform design authority `appkit-design` implements against), setup, dev-workflow, code-review, ui-testing, packaging (Developer ID + TestFlight + Mac App Store), migration, three macOS-26/27 modernization skills (launch-continuity, modern-input, liquid-glass-concentricity), `appkit-private-apis` + `appkit-app-inspector` (advanced / dual-use), and `appkit-session-report`.
 - **`appkit-dev` agent** — builds AppKit apps end-to-end.
