@@ -1,5 +1,6 @@
 {
   "name": "mac-dev-skills",
+  "description": "Skills and agents for native macOS development (AppKit, Swift, Liquid Glass, packaging & distribution).",
   "owner": { "name": "Mark", "url": "https://github.com/malstrom/mac-dev-skills" },
   "version": "0.1.0",
   "plugins": [

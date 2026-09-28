@@ -15,5 +15,6 @@
 - **No-Python toolkit:** ported `appkit-session-report`'s analyzer from Python to a single-file hashbang **Swift** script (`analyze-session.swift`, Foundation-only) — byte-identical output, verified against real sessions. The suite now depends only on Swift + bash/zsh.
 
 ### Fixed
+- `appkit` plugin failed to install in Claude Code (`agents: Invalid input`, `skills.0: Invalid input`): dropped the invalid `agents`/`skills` manifest fields in favor of auto-discovery, renamed the agent to `agents/appkit-dev.md`, and removed the stray duplicate `plugins/appkit/plugin.json`. `claude plugin validate --strict` now passes.
 - `build-tools.sh` installs `appkit-search`'s resource bundle alongside the binary (it fatal-errored on every query without it).
 - Corpus compile-audit: all 69 `appkit-search` snippets typecheck against the macOS 27 SDK (13 latent won't-compile bugs fixed).
