@@ -7,6 +7,11 @@ Add this marketplace, then install the `appkit` plugin:
 - `/plugin marketplace add malstrom/mac-dev-skills`
 - `/plugin install appkit`
 
+To install only the skills in any agent that supports [Agent Skills](https://agentskills.io) (Cursor, Codex, Gemini CLI, and others), without the `appkit-dev` agent:
+```bash
+npx skills add markmals/mac-dev-skills
+```
+
 ## What's inside
 - **14 skills** under `plugins/appkit/skills/` — `appkit-design` (the flagship: control selection, layout, semantic color/typography, Liquid Glass, window sizing, a11y — wired to both tools), `apple-hig` (the complete Apple Human Interface Guidelines bundled offline as a router skill — the all-platform design authority `appkit-design` implements against), setup, dev-workflow, code-review, ui-testing, packaging (Developer ID + TestFlight + Mac App Store), migration, three macOS-26/27 modernization skills (launch-continuity, modern-input, liquid-glass-concentricity), `appkit-private-apis` + `appkit-app-inspector` (advanced / dual-use), and `appkit-session-report`.
 - **`appkit-dev` agent** — builds AppKit apps end-to-end.
